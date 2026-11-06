@@ -1,117 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CC5FRCJJMW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CC5FRCJJMW');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qin.cm</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Monster Survivors: play and learn the first decisions | Howbetter</title>
+  <meta name="description" content="Load Monster Survivors, learn mouse movement, compare the two starting weapons, and find help for your first run.">
+  <meta name="theme-color" content="#176b64">
+  <link rel="canonical" href="https://howbetter.online/">
+  <link rel="stylesheet" href="/assets/main.css">
+  <script defer src="/assets/site.js"></script>
+  <script defer src="/assets/analytics.js" data-analytics-id="G-CC5FRCJJMW" data-analytics-origin="https://howbetter.online"></script>
 </head>
 <body>
-   <h1>xcndkfve春冬cCDSDCb</h1> 
-   <h2>ciccbcu</h2>
-   <p>Lorem ipsum dolor, sit <i>amet</i> consectetur <b>adipisicing</b> elit. Hic, at. ipsum dolor sit amet <b>consectetur</b>, adipisicing elit. Voluptate, mollitia?</p>
-</body><a href=""></a>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Play Monster Survivors — the ultimate survival action game where you battle endless waves of monsters and test your reflexes online for free!" />
-  <meta name="keywords" content="Monster Survivors, survival game, online game, play free, action game, unity game" />
-  <meta name="author" content="MonsterSurvivors.com" />
-  <link rel="canonical" href="https://www.monstersurvivors.com/" />
-  <title>Monster Survivors - Play Free Online Survival Game</title>
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://www.monstersurvivors.com/favicon.ico" type="image/x-icon" />
-</head>
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
-  <!-- Header -->
-  <header class="text-center py-8 bg-gray-50 shadow-sm">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-blue-600">Monster Survivors</h1>
-    <p class="text-lg md:text-xl text-gray-600 mt-2">Survive. Upgrade. Dominate. — Play Online for Free!</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="/" aria-label="Howbetter home">howbetter<span>PLAY & LEARN</span></a>
+    <nav aria-label="Main navigation"><a href="#play">Play</a><a href="#first-run">First run</a><a href="#questions">Questions</a></nav>
   </header>
-
-  <!-- Main Content -->
-  <main class="max-w-5xl mx-auto p-4 md:p-8">
-    <!-- Game Section -->
-    <section class="mb-10">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Play Monster Survivors Online</h2>
-      <div class="aspect-w-16 aspect-h-9 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-        <iframe
-          src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"
-          title="Monster Survivors Game"
-          class="w-full h-[70vh] md:h-[80vh]"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+  <main id="main">
+    <section class="intro wrap" aria-labelledby="game-title">
+      <div class="intro-copy">
+        <p class="eyebrow">FREEZENOVA · BROWSER SURVIVAL GAME</p>
+        <h1 id="game-title">Monster<br>Survivors</h1>
+        <p>Choose sword or wand, drag to move, and collect experience. Independent first-run notes accompany the external game below.</p>
       </div>
     </section>
 
-    <!-- Game Overview -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-3">About the Game</h2>
-      <p class="text-gray-700 text-base md:text-lg">
-        <strong>Monster Survivors</strong> is a fast-paced survival action game that throws you into
-        a chaotic world swarming with monsters. Collect power-ups, upgrade your weapons, and stay alive
-        as long as you can. Every second counts — one mistake, and it’s game over!
-      </p>
+    <section class="play-section wrap" id="play" aria-labelledby="play-heading">
+      <div class="section-heading"><h2 id="play-heading">Play here.</h2><p class="control-note"><span aria-hidden="true">↔</span> Mouse: drag to move</p></div>
+      <div class="game-shell" id="game-shell">
+        <div class="game-placeholder" id="game-placeholder">
+          <h3>Play from OnlineGames.io</h3>
+          <p>Loading connects to the external provider and its advertising services, which may show ads and use cookies or storage. <a href="https://www.onlinegames.io/privacy-policy/" target="_blank" rel="noopener noreferrer">Read its privacy policy ↗</a></p>
+          <button class="primary-button" id="load-game" type="button">Load external game</button>
+          <p class="small">No account or download needed. Our optional analytics choice is separate.</p>
+        </div>
+        <div id="game-frame-slot"></div>
+      </div>
+      <div class="game-tools" id="game-tools" hidden>
+        <p id="game-status" role="status">Game requested. Wait for the provider’s Play or Continue control.</p>
+        <button class="secondary-button" id="expand-game" type="button">Expand game area</button>
+      </div>
+      <div class="load-help">
+        <p><strong>Blank, slow, or stuck on an ad?</strong> The provider controls loading and ad breaks. Wait for its prompt; never click an ad to try to fix the game.</p>
+        <p><a href="https://www.onlinegames.io/monster-survivors/" target="_blank" rel="noopener noreferrer">Try the provider’s game page <span aria-hidden="true">↗</span></a><span id="reload-controls" hidden><span class="separator" aria-hidden="true">·</span><button class="inline-button" id="reload-game" type="button">Reload external game</button><span class="small"> Reloading interrupts the current run.</span></span></p>
+      </div>
+      <noscript><p>JavaScript is needed to load the game here. You can <a href="https://www.onlinegames.io/monster-survivors/">open it on the provider’s website</a>; these notes are still readable.</p></noscript>
     </section>
 
-    <!-- Features -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-3">Key Features</h2>
-      <ul class="list-disc pl-6 space-y-2 text-gray-700 text-base md:text-lg">
-        <li>🔥 Endless waves of challenging monsters</li>
-        <li>⚡ Skill upgrades and weapon evolution</li>
-        <li>🎮 Smooth gameplay on PC and mobile</li>
-        <li>🌐 No download required — play instantly in your browser</li>
+    <section class="guide-section wrap" id="first-run" aria-labelledby="first-run-heading">
+      <div class="section-heading"><div><p class="eyebrow">A FIRST-RUN ROUTE</p><h2 id="first-run-heading">Know what to do next.</h2></div><p class="section-aside">A short guide, not a promise of a perfect run.</p></div>
+      <div class="weapon-notes" aria-labelledby="weapon-heading">
+        <p class="eyebrow">YOUR FIRST DECISION</p><h3 id="weapon-heading">Sword or wand?</h3>
+        <div class="weapon-options">
+          <div class="weapon-option"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 44 45 9l9 1-1 9-32 29M14 36l14 14M10 54l10-10"/></svg><div><h4>Steel Sword</h4><p>For close-range fighting. Expect to move near enemies.</p></div></div>
+          <div class="weapon-option"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="m11 54 30-31M39 8l3 10 11 2-9 6 1 11-8-7-10 4 4-11-6-8 11 1z"/></svg><div><h4>Wooden Wand</h4><p>For attacking from farther away. Keep space to move.</p></div></div>
+        </div>
+        <p class="small">Starting weapons described by <a href="#source-provider">the game provider</a>. Neither guarantees a winning run.</p>
+      </div>
+      <ol class="run-steps">
+        <li><div><h3>Choose the fight you want.</h3><p>Compare the sword’s close-range attacks with the wand’s ranged attacks. Pick one to learn first: the choice changes how close you need to get to the crowd.</p><a href="#source-provider">Provider’s weapon description</a></div></li>
+        <li><div><h3>Move to collect experience.</h3><p>Drag the mouse to move. Defeated enemies leave loot that gives experience. Keep moving rather than waiting in one spot. The provider suggests a broad circular route to leave room around the crowd while collecting XP.</p><a href="#source-provider">Provider’s movement and XP advice</a></div></li>
+        <li><div><h3>Read the upgrade before choosing.</h3><p>As you collect experience, the game offers enhancements. Check whether a choice changes attack power, speed, or durability. Choose for the problem in that run rather than expecting one option to be best every time.</p><a href="#source-provider">Provider’s upgrade description</a></div></li>
+        <li><div><h3>Plan the next run after defeat.</h3><p>The provider describes menu upgrades to armor, healing, damage, and health using collected gold. Look at those choices before starting again. This website cannot inspect or restore the game’s saved progress.</p><a href="#source-provider">Provider’s between-run description</a></div></li>
+      </ol>
+      <div class="version-note"><strong>Which game is this?</strong> These notes cover FreezeNova’s browser game supplied by OnlineGames.io. Similarly named mobile games can use different controls and upgrade systems. The guidance above is based on the linked provider material; a complete playable run on this current embed has not yet been independently verified here.</div>
+    </section>
+
+    <section class="questions-section wrap" id="questions" aria-labelledby="questions-heading">
+      <div class="section-heading"><div><p class="eyebrow">WHEN SOMETHING IS UNCLEAR</p><h2 id="questions-heading">A few useful answers.</h2></div></div>
+      <div class="questions">
+        <details><summary>Do I use WASD or the mouse?</summary><p>The provider documents dragging the mouse to move. Start with that control. Keyboard movement and touch controls have not been verified for this embed, so this page does not promise either.</p></details>
+        <details><summary>Why does an ad appear before the game?</summary><p>The embedded provider runs its own advertising flow. Follow its clearly labelled game controls and wait for any break to finish. Howbetter does not control those breaks.</p><p>If it stays stuck, try <a href="https://www.onlinegames.io/monster-survivors/" target="_blank" rel="noopener noreferrer">the provider’s game page</a>. Reloading may interrupt the run; do not clear browser storage as a routine fix.</p></details>
+        <details><summary>Will my upgrades be saved?</summary><p>The provider says menu upgrades carry into later runs. Save persistence on this embed has not been independently verified here. The game manages its own browser data; Howbetter cannot back it up, transfer it between devices, or recover it.</p></details>
+      </div>
+    </section>
+
+    <section class="sources-section wrap" id="sources" aria-labelledby="sources-heading">
+      <div><p class="eyebrow">ABOUT THIS PAGE</p><h2 id="sources-heading">Independent notes.<br>Clear sources.</h2><p>Howbetter hosts this play page and writes the accompanying notes. FreezeNova makes the game; OnlineGames.io supplies the external game frame. We are not their official support service.</p><p>Found an incorrect instruction or a changed game prompt? <a href="mailto:adrianotitski159@gmail.com?subject=Howbetter%20Monster%20Survivors%20correction">Send a correction</a> with the page address, the prompt you saw, and your browser. Do not send passwords or private account information.</p></div>
+      <ul class="source-list">
+        <li id="source-provider"><a href="https://www.onlinegames.io/monster-survivors/" target="_blank" rel="noopener noreferrer">Monster Survivors — OnlineGames.io ↗</a><span>Game identity, controls, weapons and progression. Provider page checked November 6, 2026.</span></li>
+        <li><a href="https://www.onlinegames.io/t/embeddable-games-for-websites/" target="_blank" rel="noopener noreferrer">Provider’s embedding instructions ↗</a><span>The game remains hosted by its provider, with its interface and advertising intact.</span></li>
+        <li><a href="https://www.onlinegames.io/media/plugins/genGames/embed.json" target="_blank" rel="noopener noreferrer">Provider’s game catalogue ↗</a><span>The Monster Survivors entry lists the same embed address used here.</span></li>
       </ul>
     </section>
 
-    <!-- How to Play -->
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-3">How to Play</h2>
-      <p class="text-gray-700 text-base md:text-lg">
-        Use your keyboard or on-screen controls to move and attack. Survive waves of enemies, collect
-        coins and upgrades, and become the ultimate monster slayer. Every round gets harder — can you last the longest?
-      </p>
-    </section>
-
-    <!-- SEO Section -->
-    <section>
-      <h2 class="text-2xl font-semibold text-gray-800 mb-3">Why Play Monster Survivors?</h2>
-      <p class="text-gray-700 text-base md:text-lg">
-        Unlike ordinary survival games, Monster Survivors delivers a thrilling mix of strategy, reflex, and chaos.
-        Whether you’re a casual gamer or a hardcore survivor, this game will test your instincts and keep you hooked.
-      </p>
-    </section>
+    <section class="feedback-section wrap" aria-labelledby="feedback-heading"><div><h2 id="feedback-heading">Did these notes help?</h2><p>Your answer is shared only if you accept our optional analytics.</p></div><div class="feedback-actions"><button class="secondary-button" type="button" data-helpful="yes" aria-pressed="false">Yes</button><button class="secondary-button" type="button" data-helpful="no" aria-pressed="false">Not yet</button><p id="feedback-status" role="status"></p></div></section>
   </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-100 text-center py-6 mt-10 border-t border-gray-200">
-    <p class="text-gray-600 text-sm">
-      © <span id="year"></span> MonsterSurvivors.com — All Rights Reserved.
-    </p>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <footer class="site-footer wrap"><p><strong>howbetter</strong> · An independent play & learn page.</p><nav aria-label="Footer"><a href="/privacy/">Privacy</a><a href="mailto:adrianotitski159@gmail.com?subject=Howbetter%20feedback">Contact</a><button class="inline-button" type="button" data-analytics-preferences>Analytics preferences</button></nav><p class="small">Game names and content belong to their respective owners.</p></footer>
+  <aside class="analytics-choice" id="analytics-choice" aria-labelledby="analytics-choice-heading" hidden><div><h2 id="analytics-choice-heading">Help improve this page?</h2><p>Optional Google Analytics tells us which pages and guide features get used. It stays off unless you accept. The external game’s services are separate. <a href="/privacy/">Privacy details</a></p><p id="analytics-choice-status" role="status"></p></div><div class="choice-actions"><button class="secondary-button" type="button" data-analytics-choice="denied">Decline analytics</button><button class="primary-button" type="button" data-analytics-choice="granted">Accept analytics</button></div></aside>
 </body>
 </html>
-
-
-

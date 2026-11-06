@@ -1,0 +1,20 @@
+# Howbetter — Monster Survivors
+
+Independent play page and short first-run guide at https://howbetter.online/. Static HTML/CSS/JavaScript; no build or package installation. The existing Cloudflare Pages project publishes the repository root.
+
+Keep the complete provider game frame and advertising intact. Do not self-host its game files or copy another publisher's identity. The official publisher instructions and catalogue confirm the exact iframe used here:
+
+- https://www.onlinegames.io/t/embeddable-games-for-websites/
+- https://www.onlinegames.io/media/plugins/genGames/embed.json
+
+The frame is created only after “Load external game”. A frame load is not proof of playability. Events game_launch and game_reload describe requests only. Optional guide_feedback is yes/no reader feedback, not a game outcome.
+
+The guide uses the linked provider article for mouse movement, sword/wand choice, XP and menu upgrades. A complete playable run on the current embed has not yet been verified. Do not add keyboard, touch, save or upgrade guarantees without evidence, or remove this limitation merely because Unity assets load.
+
+GA4 retains G-CC5FRCJJMW. It loads only on the canonical origin after consent. Set guide-internal-test-v1=true in local storage before site maintenance to prevent loading our tag; preview origins do not load it. Device emulation can recreate a document, so verify the flag and requests again rather than relying on one injected flag.
+
+Keep enhanced measurement disabled in the existing Google stream so automatic collection does not add unreviewed events or query strings. Run `node --test analytics.test.mjs` for consent, preview/internal exclusion, withdrawal and event-boundary regressions. These tests do not replace real Google receipt or an actual playable run.
+
+The approved public correction address is adrianotitski159@gmail.com. Contact links draft an email; this site does not send it.
+
+For local inspection, serve this root on an unused loopback port using Python's standard HTTP server. There is no application backend, account, database or custom cross-origin game-state bridge.
