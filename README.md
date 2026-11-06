@@ -13,6 +13,8 @@ The guide uses the linked provider article for mouse movement, sword/wand choice
 
 GA4 retains G-CC5FRCJJMW. It loads only on the canonical origin after consent. Set guide-internal-test-v1=true in local storage before site maintenance to prevent loading our tag; preview origins do not load it. Device emulation can recreate a document, so verify the flag and requests again rather than relying on one injected flag.
 
+Production Cloudflare can inject a separate Web Analytics/RUM beacon before any Google Analytics choice. The Google preference and our internal-test flag control our Google tag, not that Cloudflare beacon or the provider iframe. Local preview's zero-external-request result is not a promise that production sends no measurements before Google consent. Cloudflare's actual production configuration is managed separately; the privacy page discloses this distinction.
+
 Keep enhanced measurement disabled in the existing Google stream so automatic collection does not add unreviewed events or query strings. Run `node --test analytics.test.mjs` for consent, preview/internal exclusion, withdrawal and event-boundary regressions. These tests do not replace real Google receipt or an actual playable run.
 
 The approved public correction address is adrianotitski159@gmail.com. Contact links draft an email; this site does not send it.
