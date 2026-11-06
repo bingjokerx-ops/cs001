@@ -9,7 +9,7 @@ Keep the complete provider game frame and advertising intact. Do not self-host i
 
 The frame is created only after “Load external game”. A frame load is not proof of playability. Events game_launch and game_reload describe requests only. Optional guide_feedback is yes/no reader feedback, not a game outcome.
 
-The guide uses the linked provider article for mouse movement, sword/wand choice, XP and menu upgrades. A complete playable run on the current embed has not yet been verified. Do not add keyboard, touch, save or upgrade guarantees without evidence, or remove this limitation merely because Unity assets load.
+The guide uses the linked provider article for mouse movement, sword/wand choice, XP and menu upgrades. An independent host-level check in desktop Chrome on November 6, 2026 verified mouse movement and XP, the first level-up choice, defeat, return to the menu and starting another run with the other weapon. This verifies the initial play flow only; keyboard/touch controls, save persistence, later stages and upgrade values remain unverified. Keep those boundaries until supported by evidence.
 
 GA4 retains G-CC5FRCJJMW. It loads only on the canonical origin after consent. Set guide-internal-test-v1=true in local storage before site maintenance to prevent loading our tag; preview origins do not load it. Device emulation can recreate a document, so verify the flag and requests again rather than relying on one injected flag.
 
