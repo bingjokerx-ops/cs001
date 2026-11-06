@@ -485,12 +485,8 @@ details p:last-child {
   flex-basis:100%
 }
 .analytics-choice {
-  position:fixed;
-  z-index:10;
-  bottom:18px;
-  left:50%;
-  transform:translateX(-50%);
   width:min(980px,calc(100% - 32px));
+  margin:24px auto;
   padding:20px 24px;
   border:1px solid #adc8b9;
   border-radius:8px;
@@ -631,7 +627,6 @@ details p:last-child {
     gap:12px 20px
   }
   .analytics-choice {
-    bottom:10px;
     padding:17px;
     display:block
   }
